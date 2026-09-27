@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('STAGE1') {
+        stage('STAGE7') {
             steps {
                 sh 'ls -lrt'
             }
