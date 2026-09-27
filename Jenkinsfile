@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('STAGE7') {
+        stage('STAGE1') {
             steps {
                 sh 'ls -lrt'
             }
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                     pwd
-                    sleep
+                    sleep 10
                     ls -lrt
                    '''
             }
