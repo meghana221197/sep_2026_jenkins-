@@ -15,34 +15,16 @@ pipeline {
         stage('STAGE1') {
             steps {
                 sh '''
-                    ls -lrt
-                    sleep 5
+                    echo "BRANCH: $BRANCH"
+                    echo "ENVIRONMENT: $ENVIRONMENT"
+                    echo "DRY-RUN: $DRY-RUN"
+
                 '''
+                   echo "BRANCH: ${params.BRANCH}"
+                    echo "ENVIRONMENT:${params.ENVIRONMENT}"
+                    echo "DRY-RUN: ${params.DRY-RUN}"
             }
         }
 
-        stage('STAGE2') {
-            steps {
-                sh '''
-                    pwd 
-                    sleep 10
-                    ls -lrt
-                '''
-            }
-        }
-
-        stage('STAGE3') {
-            steps {
-                echo "This is Stage3"
-                sh 'sleep 5'
-            }
-        }
-
-        stage('STAGE4') {
-            steps {
-                 sh 'echo THis is STAGE4'
-                 sh 'sleep 5'
-            }
-        }
     }
 }
